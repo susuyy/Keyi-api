@@ -1,0 +1,67 @@
+spring:
+  profiles:
+    active: dev
+
+wx:
+  appId: wx4f32486716eb995d
+  appSecret: a12c43285bb01271e4896d0f7de718dd
+
+---
+###########################################################################3
+#development environment
+spring:
+  profiles: dev
+  ###########################################################################3
+  application:
+    name: m-note
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/resources/config,classpath:/static/,classpath:/public/
+
+  datasource:
+    url: "jdbc:mysql://120.26.195.156:3306/note-keyi?useUnicode=true&characterEncoding=utf8&useSSL=false"
+    username: root
+    password: suyangyu1995_
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  config: classpath:logback-spring.xml
+  path: /data/logs/m-note
+  level:
+    root: info
+server:
+  port: 9901
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+---
+###########################################################################3
+#development environment
+spring:
+  profiles: prod01
+  ###########################################################################3
+  application:
+    name: m-note
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/resources/config,classpath:/static/,classpath:/public/
+
+  datasource:
+    url: "jdbc:mysql://rm-bp1sn15ar3lpa67louo.mysql.rds.aliyuncs.com:3306/note-keyi?useUnicode=true&characterEncoding=utf8&useSSL=false"
+    username: suyangyu
+    password: Suyangyu1995_
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  #  config: C:\work\031--gitlab\operation-api\ds-frame\m-sso\src\main\resources\config\logback-spring.xml
+  config: classpath:logback-spring.xml
+  path: /data/logs/m-note
+  #  path: /Users/heqiliang/loggering
+  level:
+    root: info
+server:
+  port: 9901
+
+swagger:
+  enable: false
+

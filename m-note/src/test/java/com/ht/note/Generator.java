@@ -52,13 +52,11 @@ public class Generator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://rm-wz914pnf6o11v6f5e7o.mysql.rds.aliyuncs.com/m-prime?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai");
+        dsc.setUrl("jdbc:mysql://e?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("p_suyangyu");
-//        username: p_zhengweiguang
-//        password: 4aas7FAAiWk9
-        dsc.setPassword("9XiuHIgqUcRp");
+        dsc.setUsername("1");
+        dsc.setPassword("1");
         mpg.setDataSource(dsc);
 //
         // 包配置
